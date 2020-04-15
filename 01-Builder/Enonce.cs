@@ -4,7 +4,7 @@ namespace _01_Builder
 {
     public class Enonce
     {
-        /*[Fact]
+        [Fact]
         public void _01_Creer_une_classe_User()
         {
             var firstname = "Mickael";
@@ -22,15 +22,15 @@ namespace _01_Builder
             Assert.Equal(birthYear, user.BirthYear);
             Assert.Equal(birthMonth, user.BirthMonth);
             Assert.Equal(birthDay, user.BirthDay);
-        }*/
+        }
 
-        /* [Fact]
+         [Fact]
          public void _02_Creer_une_classe_UserBuilder()
          {
              var userBuilder = new _02_Builder.Exercice.UserBuilder();
 
              Assert.True(true);
-         }*/
+         }
 
         /* [Fact]
          public void _03_Creer_une_methode_pour_stocker_le_prenom_d_un_user()
