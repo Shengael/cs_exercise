@@ -1,49 +1,53 @@
-﻿namespace _03_Factory
+﻿using _04_Factory.Exercice;
+using Xunit;
+
+namespace _03_Factory
 {
     public class Enonce
     {
-        //[Fact]
-        //public void _01_Creer_une_classe_XmlLogger_avec_une_methode_Log()
-        //{
-        //    var xmlLogger = new _04_Factory.Exercice.XmlLogger();
+        [Fact]
+        public void _01_Creer_une_classe_XmlLogger_avec_une_methode_Log()
+        {
+            var xmlLogger = new XmlLogger();
 
-        //    var log = xmlLogger.Log("mon log");
+            var log = xmlLogger.Log("mon log");
 
-        //    Assert.Equal("<log>mon log</log>", log);
-        //}
+            Assert.Equal("<log>mon log</log>", log);
+        }
 
-        //[Fact]
-        //public void _02_Creer_une_classe_JsonLogger_avec_une_methode_Log()
-        //{
-        //    var jsonLogger = new _04_Factory.Exercice.JsonLogger();
+        [Fact]
+        public void _02_Creer_une_classe_JsonLogger_avec_une_methode_Log()
+        {
+            var jsonLogger = new JsonLogger();
 
-        //    var log = jsonLogger.Log("mon log");
+            var log = jsonLogger.Log("mon log");
 
-        //    Assert.Equal("{Log:'mon log'}", log);
-        //}
+            Assert.Equal("{Log:'mon log'}", log);
+        }
 
-        //[Fact]
-        //public void _03_Creer_une_interface_ILogger_avec_une_methode_Log_pour_unifier_XmlLogger_et_JsonLogger()
-        //{
-        //    ILogger xmlLogger = new _04_Factory.Exercice.XmlLogger();
+        [Fact]
+        public void _03_Creer_une_interface_ILogger_avec_une_methode_Log_pour_unifier_XmlLogger_et_JsonLogger()
+        {
+            ILogger xmlLogger = new XmlLogger();
 
-        //    ILogger jsonLogger = new _04_Factory.Exercice.JsonLogger();
+            ILogger jsonLogger = new JsonLogger();
 
-        //    Assert.Equal("<log>mon log</log>", xmlLogger.Log("mon log"));
+            Assert.Equal("<log>mon log</log>", xmlLogger.Log("mon log"));
 
-        //    Assert.Equal("{Log:'mon log'}", jsonLogger.Log("mon log"));
-        //}
+            Assert.Equal("{Log:'mon log'}", jsonLogger.Log("mon log"));
+        }
 
-        //[Fact]
-        //public void _04_Creer_une_classe_Logger_avec_une_methode_statique_Create()
-        //{
-        //    ILogger logger = _04_Factory.Exercice.Logger.Create(Logger.Xml);
+        [Fact]
+        public void _04_Creer_une_classe_Logger_avec_une_methode_statique_Create()
+        {
+            ILogger xmlLogger = Logger.Create(LoggerType.Xml);
 
-        //    Assert.Equal("<log>mon log</log>", xmlLogger.Log("mon log"));
+            Assert.Equal("<log>mon log</log>", xmlLogger.Log("mon log"));
 
-        //    ILogger logger = _04_Factory.Exercice.Logger.Create(Logger.Json);
+            ILogger jsonLogger = Logger.Create(LoggerType.Json);
 
-        //    Assert.Equal("{Log:'mon log'}", jsonLogger.Log("mon log"));
-        //}
+            Assert.Equal("{Log:'mon log'}", jsonLogger.Log("mon log"));
+        }
     }
 }
+
