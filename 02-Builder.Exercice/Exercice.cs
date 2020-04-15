@@ -22,10 +22,36 @@ namespace _02_Builder.Exercice
             BirthMonth = birthMonth;
             BirthDay = birthDay;
         }
+
+        public User()
+        {
+            Firstname = "";
+            Lastname = "";
+            Email = "";
+            BirthYear = 0;
+            BirthMonth = 0;
+            BirthDay = 0;
+        }
     }
     
     public class UserBuilder
     {
+        private User user;
+        
+        public UserBuilder() 
+        {
+            user = new User();
+        }
+        public UserBuilder WithFirstname(string firstname)
+        {
+            user.Firstname = firstname;
+            return this;
+        }
+
+        public User Build()
+        {
+            return user;
+        }
     }
 
 }

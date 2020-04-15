@@ -1,4 +1,5 @@
-﻿using Xunit;
+﻿using _02_Builder.Exercice;
+using Xunit;
 
 namespace _01_Builder
 {
@@ -32,18 +33,17 @@ namespace _01_Builder
              Assert.True(true);
          }
 
-        /* [Fact]
+         [Fact]
          public void _03_Creer_une_methode_pour_stocker_le_prenom_d_un_user()
          {
              var userBuilder = new _02_Builder.Exercice.UserBuilder();
-
              userBuilder
                  .WithFirstname("Mickael");
 
              Assert.True(true);
-         }*/
+         }
 
-        /*[Fact]
+        [Fact]
         public void _04_Creer_une_methode_build_qui_renvoit_un_user_initialise_avec_le_prenom_d_un_user()
         {
             var firstname = "Mickael";
@@ -56,7 +56,7 @@ namespace _01_Builder
                         .Build();
 
             Assert.Equal(firstname, user.Firstname);
-        }*/
+        }
 
         /*[Fact]
         public void _05_Repeter_pour_les_proprietes_manquantes()
