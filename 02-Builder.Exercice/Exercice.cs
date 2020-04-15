@@ -36,24 +36,25 @@ namespace _02_Builder.Exercice
     
     public class UserBuilder
     {
-        private User user;
-        
-        public UserBuilder() 
-        {
-            user = new User();
-        }
+        private string _firstname;
+        private string _lastname;
+        private string _email;
+        private int _birthyear;
+        private int _birthmonth;
+        private int _birthday;
         public UserBuilder WithFirstname(string firstname)
         {
-            user.Firstname = firstname;
+            _firstname = firstname;
             return this;
         }
 
         public User Build()
         {
-            if (user.Email.Length > 0 && user.Firstname.Length > 0 && user.Lastname.Length > 0 &&
-                user.BirthDay > 0 && user.BirthYear > 0 && user.BirthMonth > 0)
+            if (!string.IsNullOrEmpty(_email) && !string.IsNullOrEmpty(_firstname) && !string.IsNullOrEmpty(_lastname) &&
+                _birthday > 0 && _birthyear > 0 && _birthmonth > 0)
             {
-                return user;
+                return new User(_firstname, _lastname, _email,
+                    _birthyear, _birthmonth, _birthday);
             }
             
             throw new Exception("You must set all the parameters");
@@ -61,31 +62,31 @@ namespace _02_Builder.Exercice
 
         public UserBuilder WithLastname(string lastname)
         {
-            user.Lastname = lastname;
+            _lastname = lastname;
             return this;
         }
 
         public UserBuilder WithEmail(string email)
         {
-            user.Email = email;
+            _email = email;
             return this;
         }
 
         public UserBuilder WithBirthYear(int birthYear)
         {
-            user.BirthYear = birthYear;
+            _birthyear = birthYear;
             return this;
         }
 
         public UserBuilder WithBirthMonth(int birthMonth)
         {
-            user.BirthMonth = birthMonth;
+            _birthmonth = birthMonth;
             return this;
         }
         
         public UserBuilder WithBirthDay(int birthDay)
         {
-            user.BirthDay = birthDay;
+            _birthday = birthDay;
             return this;
         }
     }
