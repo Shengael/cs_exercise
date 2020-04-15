@@ -1,4 +1,5 @@
-﻿using _02_Builder.Exercice;
+﻿using System;
+using _02_Builder.Exercice;
 using Xunit;
 
 namespace _01_Builder
@@ -48,14 +49,9 @@ namespace _01_Builder
         {
             var firstname = "Mickael";
 
-            var userBuilder = new _02_Builder.Exercice.UserBuilder();
+            var userBuilder = new _02_Builder.Exercice.UserBuilder().WithFirstname(firstname);
 
-            var user =
-                    userBuilder
-                        .WithFirstname(firstname)
-                        .Build();
-
-            Assert.Equal(firstname, user.Firstname);
+            Assert.Throws<Exception>(() => userBuilder.Build());
         }
 
         [Fact]
