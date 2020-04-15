@@ -4,7 +4,7 @@ namespace _01_Builder
 {
     public class Enonce
     {
-        /*[Fact]
+        [Fact]
         public void _01_Creer_une_classe_User()
         {
             var firstname = "Mickael";
@@ -22,28 +22,28 @@ namespace _01_Builder
             Assert.Equal(birthYear, user.BirthYear);
             Assert.Equal(birthMonth, user.BirthMonth);
             Assert.Equal(birthDay, user.BirthDay);
-        }*/
+        }
 
-        /* [Fact]
-         public void _02_Creer_une_classe_UserBuilder()
-         {
-             var userBuilder = new _02_Builder.Exercice.UserBuilder();
+        [Fact]
+        public void _02_Creer_une_classe_UserBuilder()
+        {
+            var userBuilder = new _02_Builder.Exercice.UserBuilder();
 
-             Assert.True(true);
-         }*/
+            Assert.True(true);
+        }
 
-        /* [Fact]
-         public void _03_Creer_une_methode_pour_stocker_le_prenom_d_un_user()
-         {
-             var userBuilder = new _02_Builder.Exercice.UserBuilder();
+        [Fact]
+        public void _03_Creer_une_methode_pour_stocker_le_prenom_d_un_user()
+        {
+            var userBuilder = new _02_Builder.Exercice.UserBuilder();
 
-             userBuilder
-                 .WithFirstname("Mickael");
+            userBuilder
+                .WithFirstname("Mickael");
 
-             Assert.True(true);
-         }*/
+            Assert.True(true);
+        }
 
-        /*[Fact]
+        [Fact]
         public void _04_Creer_une_methode_build_qui_renvoit_un_user_initialise_avec_le_prenom_d_un_user()
         {
             var firstname = "Mickael";
@@ -56,9 +56,9 @@ namespace _01_Builder
                         .Build();
 
             Assert.Equal(firstname, user.Firstname);
-        }*/
+        }
 
-        /*[Fact]
+        [Fact]
         public void _05_Repeter_pour_les_proprietes_manquantes()
         {
             var firstname = "Mickael";
@@ -86,6 +86,6 @@ namespace _01_Builder
             Assert.Equal(birthYear, user.BirthYear);
             Assert.Equal(birthMonth, user.BirthMonth);
             Assert.Equal(birthDay, user.BirthDay);
-        }*/
+        }
     }
 }
