@@ -50,7 +50,43 @@ namespace _02_Builder.Exercice
 
         public User Build()
         {
-            return user;
+            if (user.Email.Length > 0 && user.Firstname.Length > 0 && user.Lastname.Length > 0 &&
+                user.BirthDay > 0 && user.BirthYear > 0 && user.BirthMonth > 0)
+            {
+                return user;
+            }
+            
+            throw new Exception("You must set all the parameters");
+        }
+
+        public UserBuilder WithLastname(string lastname)
+        {
+            user.Lastname = lastname;
+            return this;
+        }
+
+        public UserBuilder WithEmail(string email)
+        {
+            user.Email = email;
+            return this;
+        }
+
+        public UserBuilder WithBirthYear(int birthYear)
+        {
+            user.BirthYear = birthYear;
+            return this;
+        }
+
+        public UserBuilder WithBirthMonth(int birthMonth)
+        {
+            user.BirthMonth = birthMonth;
+            return this;
+        }
+        
+        public UserBuilder WithBirthDay(int birthDay)
+        {
+            user.BirthDay = birthDay;
+            return this;
         }
     }
 

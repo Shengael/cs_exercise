@@ -58,7 +58,7 @@ namespace _01_Builder
             Assert.Equal(firstname, user.Firstname);
         }
 
-        /*[Fact]
+        [Fact]
         public void _05_Repeter_pour_les_proprietes_manquantes()
         {
             var firstname = "Mickael";
@@ -86,6 +86,6 @@ namespace _01_Builder
             Assert.Equal(birthYear, user.BirthYear);
             Assert.Equal(birthMonth, user.BirthMonth);
             Assert.Equal(birthDay, user.BirthDay);
-        }*/
+        }
     }
 }
